@@ -1,1 +1,18 @@
-spring.application.name=task-management
+spring:
+  application:
+    name: task-management
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5434/cacttus
+    username: cacttus
+    password: cacttus
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+secretKey: 2870662494a8f05129ef6d038d1fb122653ca97c7795c80063341589660b25e3
