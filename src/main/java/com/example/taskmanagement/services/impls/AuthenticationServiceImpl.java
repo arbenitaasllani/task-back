@@ -49,7 +49,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         if (existingUser.isPresent()) {
             throw new EntityFoundException(String.format("User with email: %s already exists", req.getEmail()));
         }
-        User user = userHelper.createUserWithRole(req, "CUSTOMER");
+        User user = userHelper.createUserWithRole(req, "ADMIN");
         return userHelper.authenticationResponse(user);
     }
 }
